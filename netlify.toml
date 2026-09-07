@@ -1,0 +1,4 @@
+# Static site — no build step. The self-contained invitation is index.html at the repo root.
+[build]
+  publish = "."
+  command = ""
