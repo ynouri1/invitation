@@ -1,0 +1,11 @@
+# Reference material from the invitio.io "Lella Beya" template — NOT ours to redistribute
+1000022998.jpg
+1000023000.jpg
+1000023002.jpg
+1000023004.jpg
+1000023006.jpg
+Enregistrement*.mp4
+
+# Python / build
+__pycache__/
+*.pyc
