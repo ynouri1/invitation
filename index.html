@@ -65,7 +65,10 @@
   .photo .bg{position:absolute; inset:-4%; background-size:cover; background-position:center; z-index:0;}
   .photo .bg.blur{filter:blur(5px) brightness(.55) saturate(1.05);}
   .photo .bg.dim{filter:brightness(.42);}
-  .photo .veil{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(24,5,9,.85), rgba(24,5,9,.35) 30%, rgba(24,5,9,.35) 70%, rgba(24,5,9,.9));}
+  .photo .veil{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(20,4,8,.9), rgba(20,4,8,.55) 28%, rgba(20,4,8,.55) 72%, rgba(20,4,8,.92));}
+  /* readable scrim behind text only — keeps the photo visible around it */
+  .salon .content::before, .photo .wrap::before{content:""; position:absolute; inset:-30px -10px; z-index:-1; pointer-events:none;
+    background:radial-gradient(80% 66% at 50% 50%, rgba(12,3,6,.72), rgba(12,3,6,.34) 58%, transparent 80%);}
 
   /* =========================================================
      INTRO — real photo of the door, leaves cut out and swung
