@@ -9,3 +9,6 @@ Enregistrement*.mp4
 # Python / build
 __pycache__/
 *.pyc
+
+# local deploy folder for Netlify Drop
+dist/

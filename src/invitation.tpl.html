@@ -50,7 +50,7 @@
   .names{font-size:clamp(2.7rem,13vw,4.4rem); line-height:1.05; letter-spacing:.04em; margin:0;}
   .amp{font-style:italic; display:inline-block; padding:0 .12em; font-weight:400;}
   .stitle{font-size:clamp(1.55rem,6.4vw,2.25rem); letter-spacing:.2em; text-transform:uppercase; line-height:1.2;}
-  p.body{color:var(--ivory); font-size:clamp(1.08rem,4.4vw,1.22rem); max-width:34ch; margin:22px auto 0; letter-spacing:.012em; text-shadow:0 1px 8px rgba(0,0,0,.5);}
+  p.body{color:var(--ivory); font-size:clamp(1.14rem,4.7vw,1.26rem); max-width:32ch; margin:22px auto 0; letter-spacing:.012em; text-shadow:0 1px 10px rgba(0,0,0,.7);}
   .signature{font-family:var(--script); font-size:clamp(2.6rem,12vw,3.4rem); line-height:1; margin:.35em 0 0;}
   .sig-lead{font-style:italic; color:var(--ivory-dim); display:block; font-size:1.1rem; letter-spacing:.03em;}
   .divider{display:flex; justify-content:center; margin:26px auto;}
@@ -60,7 +60,8 @@
   .mono-letter{font-family:var(--serif); font-weight:500; fill:var(--gold-lt);}
 
   /* ---- photo sections ---- */
-  .photo{position:relative; padding:clamp(72px,14vw,130px) 0; text-align:center; overflow:hidden; isolation:isolate;}
+  .photo{position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding:clamp(56px,11vw,120px) 0; text-align:center; overflow:hidden; isolation:isolate;}
   .photo .bg{position:absolute; inset:-4%; background-size:cover; background-position:center; z-index:0;}
   .photo .bg.blur{filter:blur(5px) brightness(.55) saturate(1.05);}
   .photo .bg.dim{filter:brightness(.42);}
@@ -114,16 +115,16 @@
   /* =========================================================
      SALON COVER
      ========================================================= */
-  .salon{position:relative; min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
-    padding:60px 26px 56px; text-align:center; overflow:hidden; isolation:isolate;}
+  .salon{position:relative; min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:64px 26px 60px; text-align:center; overflow:hidden; isolation:isolate;}
   .salon .bg{position:absolute; inset:-6%; background:var(--img-salon) center 40% / cover no-repeat; z-index:0; transform:scale(1.1);}
   body.entered .salon .bg{animation:settle 4s cubic-bezier(.2,.6,.2,1) both;}
-  .salon .veil{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(24,5,9,.35), rgba(24,5,9,.05) 30%, rgba(24,5,9,.45) 62%, rgba(24,5,9,.94) 100%);}
+  .salon .veil{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(24,5,9,.5), rgba(24,5,9,.2) 26%, rgba(24,5,9,.5) 54%, rgba(24,5,9,.78) 78%, rgba(24,5,9,.92) 100%);}
   .salon .content{position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:6px; max-width:var(--maxw);}
   body.entered .salon .content > *{animation:fadeUp 1.2s ease both;}
   .salon .content > :nth-child(2){animation-delay:.15s} .salon .content > :nth-child(3){animation-delay:.3s}
   .salon .content > :nth-child(4){animation-delay:.45s} .salon .content > :nth-child(5){animation-delay:.6s} .salon .content > :nth-child(6){animation-delay:.75s}
-  .salon .invite{font-size:clamp(1.2rem,5.2vw,1.5rem); color:var(--ivory); max-width:26ch; margin:10px 0 0; line-height:1.7; text-shadow:0 2px 12px rgba(0,0,0,.7);}
+  .salon .invite{font-size:clamp(1.28rem,5.6vw,1.55rem); color:var(--ivory); max-width:24ch; margin:14px 0 0; line-height:1.7; text-shadow:0 2px 14px rgba(0,0,0,.85);}
   .salon .rule{width:min(240px,60vw); color:var(--gold);}
   .scroll-cue{display:inline-flex; flex-direction:column; align-items:center; gap:8px; margin-top:22px; color:var(--ivory-soft); text-decoration:none; font-size:.7rem; letter-spacing:.34em; text-transform:uppercase; padding-left:.34em; text-shadow:0 1px 8px rgba(0,0,0,.7);}
   .scroll-cue .chev{animation:floaty 2.4s ease-in-out infinite;}
@@ -145,7 +146,8 @@
   .stage.revealed .date-card{opacity:1; transform:scale(1); pointer-events:auto;}
 
   /* ---- venue (light paper section, like the template) ---- */
-  .venue{background:var(--paper); color:var(--paper-ink); padding:clamp(64px,13vw,110px) 0; text-align:center; position:relative;}
+  .venue{background:var(--paper); color:var(--paper-ink); min-height:100svh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding:clamp(56px,11vw,110px) 0; text-align:center; position:relative;}
   .venue .eyebrow{color:#8a6a3a;}
   .venue .divider svg{color:var(--gold-dp);}
   .venue-name{font-size:clamp(1.8rem,7.4vw,2.4rem); letter-spacing:.02em; margin:6px 0 0; color:#5a1a22;}
@@ -239,7 +241,7 @@
     <div class="veil" aria-hidden="true"></div>
     <div class="content">
       <div class="monogram" aria-hidden="true"><svg viewBox="0 0 220 110"><use href="#mono"/></svg></div>
-      <h1 class="names gold-text" style="font-size:clamp(2.3rem,11vw,3.6rem)">Hajer<span class="amp">&amp;</span>Yassine</h1>
+      <h1 class="names gold-text" style="font-size:clamp(2.9rem,13.5vw,4.1rem)">Hajer<span class="amp">&amp;</span>Yassine</h1>
       <svg class="rule" viewBox="0 0 240 24" aria-hidden="true"><use href="#rule"/></svg>
       <p class="invite">Nous avons l'immense joie de vous inviter à célébrer notre mariage</p>
       <p class="eyebrow" style="margin-top:10px">Lundi 26 octobre 2026</p>
