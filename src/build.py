@@ -16,7 +16,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "assets")
-OUT = os.path.join(HERE, os.pardir, "invitation.html")
+OUT = os.path.join(HERE, os.pardir, "index.html")  # served at the site root by GitHub Pages
 MAX_W = 1600
 
 SOURCES = {

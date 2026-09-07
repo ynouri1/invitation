@@ -11,10 +11,11 @@ et un bouton pour la couper.
 
 ## Fichiers
 
-- [`invitation.html`](invitation.html) — la page finale, **autonome** (les photos sont intégrées en
-  data URI, la musique est synthétisée dans la page). C'est le seul fichier à ouvrir ou héberger.
+- [`index.html`](index.html) — la page finale, **autonome** (les photos sont intégrées en
+  data URI, la musique est synthétisée dans la page). C'est le seul fichier à ouvrir ou héberger ;
+  nommé `index.html` pour être servi à la racine par GitHub Pages.
 - [`src/invitation.tpl.html`](src/invitation.tpl.html) — le gabarit source (marqueurs `%%IMG_*%%`).
-- [`src/build.py`](src/build.py) — reconstruit `invitation.html` en réencodant les photos et en
+- [`src/build.py`](src/build.py) — reconstruit `index.html` en réencodant les photos et en
   mesurant l'ouverture de la porte pour animer les battants.
 - [`src/assets/`](src/assets) — les trois photos sources (porte fermée, salon, embrasure ouverte).
 
